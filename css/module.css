@@ -1,0 +1,41 @@
+.content-slider {
+    border: 3px dashed #000;
+    position: relative;
+    overflow: hidden;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.content-slider-item {
+    display: block;
+    left: 0;
+    top: 0;
+
+    transition: 0.4s;
+
+    transform: translateX(100%);
+}
+
+.content-slider-item:first-child {
+    position: static;
+
+    transform: translateX(0);
+}
+
+.content-slider-swipe {
+    width: 32px;
+    z-index: 1;
+    top: 50%;
+
+    transform: translateY(50%);
+}
+
+.content-slider-swipe.prev {
+    left: 10px;
+
+    transform: rotate(180deg);
+}
+
+.content-slider-swipe.next {
+    right: 10px;
+}
